@@ -88,6 +88,25 @@ export function getCustomerID(req: Request): string {
     return val;
 }
 
+export function getPowers(req: Request): string[] {
+    const val = req.header("x-heimdall-msagent-powers")
+    if (!val) {
+        return [];
+    }
+
+    try{
+        const bytesArr = Buffer.from(val, "base64");
+        const inflated = zlib.inflateSync(bytesArr);
+        const arr = JSON.parse(inflated.toString()) as string[];
+        return arr;
+    }
+    catch(err){
+        console.error(err);
+        return [];
+    }
+
+}
+
 export function isGuest(req: Request): boolean {
     const val = req.header("X-Heimdall-MSAuth-JWT-IsGuest");
     if (!val || val !== "1") {
