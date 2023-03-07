@@ -1,6 +1,6 @@
 {
     "name": "@pedidopago/heimdall-session-client",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Middlewares for parsing session headers from Heimdall",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
         "type": "git",
         "url": "git+https://github.com/pedidopago/heimdall-session-client-js.git"
     },
-    "author": "Gabriel Ochsenhofer",
+    "author": "Pedido Pago",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/pedidopago/heimdall-session-client-js/issues"
