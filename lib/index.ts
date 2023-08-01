@@ -107,7 +107,7 @@ export function getPowers(req: Request): string[] {
 
   try {
     const bytesArr = Buffer.from(val, "base64");
-    const inflated = zlib.inflateSync(bytesArr);
+    const inflated = zlib.inflateRawSync(bytesArr);
     const arr = JSON.parse(inflated.toString()) as string[];
     return arr;
   } catch (err) {

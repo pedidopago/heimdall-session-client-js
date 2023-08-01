@@ -1,6 +1,6 @@
 {
   "name": "@pedidopago/heimdall-session-client",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Middlewares for parsing session headers from Heimdall",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
